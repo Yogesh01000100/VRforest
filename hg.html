@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color: black "environment="preset:forest">
+    <a-entity camera position="2 5 5" wasd-controls look-controls></a-entity>
+    <a-assets>
+      <a-asset-item id="log" src="log_scene/scene.gltf"></a-asset-item>
+      <a-asset-item id="windmill" src="windmill/scene.gltf"></a-asset-item>
+      <a-asset-item id="hut" src="loggers_hut_low_poly/scene.gltf"></a-asset-item>
+  </a-assets>
+  
+  <a-entity gltf-model="#log" position="10 0 0"></a-entity>
+  <a-entity gltf-model="#windmill" position="10 0 10" scale="0.002 0.002 0.002"></a-entity>
+  <a-entity gltf-model="#hut" scale="0.02 0.02 0.02"></a-entity>
+    <a-entity environment="lightPosition: 1 5 -2; groundColor: #445"></a-entity>
+    <a-entity gltf-model="#village"></a-entity>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
+  </a-scene>
+</body>
+
+</html>
+<!--"Log Scene" (https://skfb.ly/6QYrr) by HBradnam is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
+<!--"Logger's Hut low poly" (https://skfb.ly/6FWEV) by RacKrab is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
+<!---"Windmill" (https://skfb.ly/6ZKI6) by tomverity is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
